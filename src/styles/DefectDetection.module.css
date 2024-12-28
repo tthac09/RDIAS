@@ -1,0 +1,287 @@
+/* src/styles/DefectDetection.module.css */
+.defectDetectionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.error {
+  color: #ff0000;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.selectImage,
+.selectModel {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.selectImage h3,
+.selectModel h3 {
+  font-size: 20px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.selectImage select,
+.selectModel select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.selectImage select:focus,
+.selectModel select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.imagePreview {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.imagePreview h4 {
+  font-size: 18px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.imagePreview img {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.startDetection {
+  margin-bottom: 20px;
+}
+
+.startDetection button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.startDetection button:hover {
+  background-color: #0056b3;
+}
+
+.detectionResult {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.detectionResult h3 {
+  font-size: 20px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.detectionResult img {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.saveResult {
+  margin-bottom: 20px;
+}
+
+.saveResult button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.saveResult button:hover {
+  background-color: #218838;
+}
+
+.linkBack {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.linkBack a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.linkBack a:hover {
+  text-decoration: underline;
+}
+
+/* src/styles/DefectDetection.module.css */
+
+.loadingOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loadingPopup {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.loadingPopup p {
+  font-size: 18px;
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* DefectDetection.module.css */
+.successPopupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.successPopup {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px; /* 可根据需要调整 */
+}
+
+.successPopup p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.successPopup button {
+  background-color: #4CAF50; /* 绿色背景 */
+  color: white; /* 白色文字 */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.successPopup button:hover {
+  background-color: #45a049; /* 鼠标悬停时的颜色 */
+}
+
+.successPopup button:active {
+  background-color: #388e3c; /* 点击时的颜色 */
+}
+
+.errorPopupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.errorPopup {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px; /* 可根据需要调整 */
+}
+
+.errorPopup p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #d32f2f; /* 红色文字 */
+}
+
+.errorPopup button {
+  background-color: #f44336; /* 红色背景 */
+  color: white; /* 白色文字 */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.errorPopup button:hover {
+  background-color: #e53935; /* 鼠标悬停时的颜色 */
+}
+
+.errorPopup button:active {
+  background-color: #d32f2f; /* 点击时的颜色 */
+}
+
+/* 搜索框样式 */
+.selectImage input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  box-sizing: border-box; /* 确保宽度包含 padding */
+}
+
+.selectImage input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.selectImage input[type="text"]::placeholder {
+  color: #999;
+}

@@ -1,0 +1,374 @@
+/* src/styles/DefectAnalysis.module.css */
+.defectAnalysisContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.error {
+  color: #ff0000;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.detectionResults {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.detectionResults h3 {
+  font-size: 20px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.detectionResults ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.detectionResults li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.detectionResults li span {
+  cursor: pointer;
+  color: #007bff;
+  font-size: 16px;
+}
+
+.detectionResults li button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.detectionResults li button:hover {
+  background-color: #c82333;
+}
+
+.selectedResult {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.selectedResult h4 {
+  font-size: 18px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.selectedResult img {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  margin: 0 auto; /* 水平居中 */
+}
+
+.selectedResult textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+.selectedResult .fileNameInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.generateReport {
+  margin-bottom: 20px;
+}
+
+.generateReport button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.generateReport button:hover {
+  background-color: #218838;
+}
+
+.linkBack {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.linkBack a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.linkBack a:hover {
+  text-decoration: underline;
+}
+
+.toggleButton {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 1em;
+}
+
+.toggleButton:hover {
+  background-color: #0056b3;
+}
+
+.detectionBoxes ul {
+  list-style: none;
+  padding: 1em; /* 增加内边距 */
+  margin-top: 1em;
+  text-align: left;
+  background-color: #e9ecef; /* 稍深的灰色 */
+  border-radius: 6px; /* 更圆润的边角 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加轻微的阴影效果，使背景浮起来 */
+}
+
+.detectionBoxes li {
+  margin-bottom: 1em;
+  padding-left: 10px; /* 给每个项目增加左边距，避免文字紧贴边缘 */
+}
+
+.detectionBoxes p {
+  margin: 0.2em 0;
+  padding-left: 5px; /* 增加段落的内边距，改善文本的显示 */
+  text-align: left;
+  font-size: 1rem; /* 调整字体大小，使其更适合视觉效果 */
+  color: #333; /* 更深的灰色文字，提升可读性 */
+}
+
+.detectionBoxes {
+  font-family: Arial, sans-serif; /* 使用现代字体 */
+}
+
+
+.detectionTime {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+/* 整体容器 */
+.statsContainer {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 时间范围选择部分样式 */
+.timeRange {
+  display: flex;
+  flex-direction: column; /* 整体改为纵向排列 */
+  align-items: flex-start; /* 左对齐 */
+}
+
+.timeRange h3 {
+  margin-bottom: 10px; /* "选择时间范围"和时间选择框之间的间距 */
+}
+
+.timeRange .inputs {
+  display: flex;
+  flex-direction: row; /* 时间选择框仍保持横向排列 */
+  align-items: center; /* 垂直居中对齐 */
+}
+
+.timeRange input {
+  margin-right: 10px; /* 输入框之间的间距 */
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.timeRange span {
+  margin: 0 10px; /* 时间选择框和'至'之间的间距 */
+}
+
+
+
+
+/* 统计按钮样式 */
+.generateStatsButton {
+  margin-top: 0; /* 移除原先的顶部间距 */
+  margin-left: 20px; /* 给按钮添加左边距，使其与输入框有间距 */
+  padding: 10px 20px; /* 调整按钮的内边距，使其更合适 */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px; /* 调整字体大小使其一致 */
+}
+
+.generateStatsButton:hover {
+  background-color: #0056b3;
+}
+
+
+/* 统计结果部分 */
+.statsResults {
+  margin-top: 20px;
+}
+
+.statsResults ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.statsResults li {
+  margin: 10px 0;
+}
+
+/* 检测框展开按钮 */
+.toggleButton {
+  margin-top: 20px;
+  padding: 8px 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.toggleButton:hover {
+  background-color: #218838;
+}
+
+.detectionBoxes ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.detectionBoxes li {
+  margin: 10px 0;
+}
+
+/* 弹窗样式 */
+.successPopupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.successPopup {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 500px;  /* 弹窗宽度 */
+}
+
+.successPopup p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.successPopup button {
+  background-color: #4CAF50; /* 绿色背景 */
+  color: white; /* 白色文字 */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.successPopup button:hover {
+  background-color: #45a049; /* 鼠标悬停时的颜色 */
+}
+
+.successPopup button:active {
+  background-color: #388e3c; /* 点击时的颜色 */
+}
+
+.selectedResult {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* 控制整体间距 */
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 靠左对齐 */
+  gap: 8px; /* 标签和输入框之间的间距 */
+}
+
+.label {
+  font-weight: 300; /* 更细的字体 */
+  font-size: 14px;
+  color: #666; /* 灰色字体 */
+}
+
+.input {
+  width: 100%; /* 输入框宽度占满父容器 */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+textarea.input {
+  resize: vertical; /* 允许垂直调整大小 */
+}
