@@ -8,6 +8,14 @@ This is a software designed for intelligent identifying and analysing metal defe
 
 The software is designed under Browser/Client Architecture, using TCP/IP for passing information.
 
+## Members
+
+[Thomas Chen](https://github.com/tthac09/)
+
+[Anna1ximi](https://github.com/Anna1ximi)
+
+[H.K. Zheng](https://github.com/dt-3t)
+
 ## Quick Start
 
 ### Requirements
@@ -54,9 +62,11 @@ python backend/app.py
                               ### backend
 ├── uploads/                  # Store uploaded files
 ├── backend/                  # Functional programmes
-│   └── app.py                    # Main proc in back-end
+│   └── app.py                # Main proc in back-end
                               ### Others
 ├── requirements.txt
+├──package.json
+├──package-lock.json
 ├── .gitignore                 
 └── README.md                 
 ```
@@ -65,7 +75,7 @@ python backend/app.py
 
 This is a project for education purpose. It is licensed by AGPL-3.0. 
 
-Ultralytics YOLO11 is used in our progect under the license of AGPL-3.0. An enterprise license is needed for commercial use.
+Ultralytics YOLO11 is used in our project under the license of AGPL-3.0 for for students and enthusiasts. An enterprise license is needed for commercial use.
 
 Some other packages used in this project may also include other licenses, anyone who runs our project should pay attention.
 

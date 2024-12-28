@@ -2,6 +2,8 @@
 
 [[GitHub]](https://github.com/tthac09/RDIAS)
 
+更多信息请见 README.md
+
 ## 快速开始
 
 ### 前置
