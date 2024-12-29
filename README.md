@@ -75,7 +75,7 @@ python backend/app.py
 
 This is a project for education purpose. It is licensed by AGPL-3.0. 
 
-Ultralytics YOLO11 is used in our project under the license of AGPL-3.0 for for students and enthusiasts. An enterprise license is needed for commercial use.
+Ultralytics YOLO11 is used in our project under the license of AGPL-3.0 for students and enthusiasts. An enterprise license is needed for commercial use.
 
 Some other packages used in this project may also include other licenses, anyone who runs our project should pay attention.
 
